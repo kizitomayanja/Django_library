@@ -1,14 +1,14 @@
 
 {% extends "catalog/base_generic.html" %}
 
-{% block title %}Sign Up{% endblock %}
+{% block title %}<title>Sign Up</title>{% endblock %}
 
 {% block content %}
   <h2>Sign up</h2>
   {% if form.errors %}
 <p>There was an error</p>
   {% endif %}
-  <form method="post">
+  <form method="post" style="align-items: center;">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Sign Up</button>

@@ -2,14 +2,12 @@
     margin-top:0;
     margin-left: 0;
     
-    display: flex;
-    flex-direction: column;
-    justify-content:safe;
+   
     list-style: none;
     width: 200px;
     position: fixed;
     height: 100%;
-    background-color: rgb(255, 153, 0);
+    background-color: rgb(13, 194, 58);
     color: black;
     padding: 10px;
     font-family: 'Lobster', cursive;
@@ -18,20 +16,20 @@
 }
 
 body form{
-    text-align: center;
+    text-align: start;
 }
 
-form {
-    display: inline-block;
-}
 
+a{
+    text-decoration: none;
+}
 h1 .heading {
     z-index: 9;
     width: 100%;
-    display: block;
-    padding: 20px,20px,20px,20px;
+    display: inline-block;
+    padding: 20px 20px 20px 20px;
     background-color: aquamarine;
-    font-family: "Lobster", cursive;
+    
     color: orangered;
 }
 
@@ -41,14 +39,19 @@ body{
 
 
 .sidebar-nav a{
+    display: inline-block;
+    padding-left: 10px;
+   
+    padding-top: 50px;
+    
+    
 color: black;
 font-size: 20pt;
 
 }
 .sidebar-nav a:hover{
     color: rgb(250, 246, 246);
-    font-size: 22pt;
-    transition: 0.3s;
+    transition: 0.1s;
 
     
     }

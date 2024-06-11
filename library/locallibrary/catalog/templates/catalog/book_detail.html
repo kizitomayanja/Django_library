@@ -21,8 +21,8 @@
     {% if copy.status != 'a' and copy.status != 'r' %}
     <p><strong>Due to be returned: </strong> {{ copy.due_back }}</p>
     {% endif %}
-    <!---->
-    <img src="{{ book.cover.url }}" >
+    <!--<img src="{{ book.cover.url }}" >-->
+    <a href="">{{ book.cover }}</a>
     <p><strong>Imprint: </strong> {{ copy.imprint }}</p>
     <p class="text-muted"><strong>Id: </strong> {{ copy.id }}</p>
     {% endfor %}

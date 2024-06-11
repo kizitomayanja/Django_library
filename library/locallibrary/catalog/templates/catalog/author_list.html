@@ -5,10 +5,24 @@
 {% endblock %}
 {% block content%}
 <h1>Author List</h1>
-<div>
+<div style="display: block; ">
+    <table style="text-align: start;">
+        <tr>
+            <th>No.</th>
+            <th>Author</th>
+        </tr>
+        {% for author in author_list %} 
+        <tr>
+
+            <td style="width: 50px;"><em>{{author.pk}}</em></td>
+            <td><a href="{% url 'author-detail' pk=author.pk %}"> {{ author.first_name }}, {{ author.last_name }}</a></td>
+        </tr>
+
+        {% endfor %}
+    </table>
     {% for author in author_list %}
-    <p><strong>Name: </strong> <a href="{% url 'author-detail' pk=author.pk %}"> {{ author.first_name }}, {{ author.last_name }}</a></p>
-   
+    <!--<p><strong>Name: </strong> <a href="{% url 'author-detail' pk=author.pk %}"> {{ author.first_name }}, {{ author.last_name }}</a></p>
+-->
     
 
 
