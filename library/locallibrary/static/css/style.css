@@ -17,7 +17,16 @@
     
 }
 
-header .heading {
+body form{
+    text-align: start;
+}
+
+
+a{
+    text-decoration: none;
+}
+h1 .heading {
+    z-index: 9;
     width: 100%;
     display: block;
     padding: 20px,20px,20px,20px;
