@@ -3,6 +3,15 @@ from django.shortcuts import render
 # Create your views here.
 from .models import Book, Author, BookInstance, Genre, Language
 from django.views import generic
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from catalog.forms import SignUpUserForm
+
+class RegisterUserView(generic.CreateView):
+    form_class=SignUpUserForm
+    success_url=reverse_lazy('login')
+    template_name='registration/signup.html'
+    
 
 def index(request):
 
@@ -27,3 +36,9 @@ class BookListView(generic.ListView):
 
 class BookDetailView(generic.DetailView):
     model = Book
+
+class AuthorListView(generic.ListView):
+    model = Author
+
+class AuthorDetailView(generic.DetailView):
+    model = Author
