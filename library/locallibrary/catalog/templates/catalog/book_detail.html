@@ -4,7 +4,7 @@
 <h1>
     Title: {{ book.title }}
 </h1>
-<p><strong>Author: </strong> <a href="">{{ book.author}}</a> </p>
+<p><strong>Author: </strong> <a href="{{ book.author.get_absolute_url }}">{{ book.author }}</a> </p>
 <p><strong>Summary: </strong>{{ book.summary }}</p>
 <p><strong>ISBN: </strong>{{ book.isbn }}</p>
 <p><strong>Language: </strong>{{ book.language }}</p>
@@ -21,6 +21,8 @@
     {% if copy.status != 'a' and copy.status != 'r' %}
     <p><strong>Due to be returned: </strong> {{ copy.due_back }}</p>
     {% endif %}
+    <!---->
+    <img src="{{ book.cover.url }}" >
     <p><strong>Imprint: </strong> {{ copy.imprint }}</p>
     <p class="text-muted"><strong>Id: </strong> {{ copy.id }}</p>
     {% endfor %}
